@@ -77,13 +77,37 @@ extern "C" {
 
 
 
+/* Defines for TIMER_0 */
+#define TIMER_0_INST                                                    (TIMG12)
+#define TIMER_0_INST_IRQHandler                                TIMG12_IRQHandler
+#define TIMER_0_INST_INT_IRQN                                  (TIMG12_INT_IRQn)
+#define TIMER_0_INST_LOAD_VALUE                                       (1599999U)
+
+
+
+
+/* Port definition for Pin Group GPIO_LEDS */
+#define GPIO_LEDS_PORT                                                   (GPIOA)
+
+/* Defines for USER_TEST: GPIOA.15 with pinCMx 37 on package pin 8 */
+#define GPIO_LEDS_USER_TEST_PIN                                 (DL_GPIO_PIN_15)
+#define GPIO_LEDS_USER_TEST_IOMUX                                (IOMUX_PINCM37)
+/* Defines for USER_LED_1: GPIOA.0 with pinCMx 1 on package pin 33 */
+#define GPIO_LEDS_USER_LED_1_PIN                                 (DL_GPIO_PIN_0)
+#define GPIO_LEDS_USER_LED_1_IOMUX                                (IOMUX_PINCM1)
+
+
 /* clang-format on */
 
 void SYSCFG_DL_init(void);
 void SYSCFG_DL_initPower(void);
 void SYSCFG_DL_GPIO_init(void);
 void SYSCFG_DL_SYSCTL_init(void);
+void SYSCFG_DL_TIMER_0_init(void);
 
+
+bool SYSCFG_DL_saveConfiguration(void);
+bool SYSCFG_DL_restoreConfiguration(void);
 
 #ifdef __cplusplus
 }
