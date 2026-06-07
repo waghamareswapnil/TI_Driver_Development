@@ -136,7 +136,7 @@ all: $(OBJS) $(GEN_CMDS)
 TI_Driver_Developemnt.out: $(OBJS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: Arm Linker'
-	"D:/Swapnil_Software/Code_Composer_Studio_TI/ccs/tools/compiler/ti-cgt-armllvm_3.2.2.LTS/bin/tiarmclang.exe" @"device.opt"  -march=thumbv6m -mcpu=cortex-m0plus -mfloat-abi=soft -mlittle-endian -mthumb -O2 -gdwarf-3 -Wall -Wl,-m"TI_Driver_Developemnt.map" -Wl,-i"C:/ti/mspm0_sdk_2_10_00_04/source" -Wl,-i"C:/Users/sacf n/Desktop/Git_Practice/TI_Driver_Practice/TI_Driver_Developemnt" -Wl,-i"C:/Users/sacf n/Desktop/Git_Practice/TI_Driver_Practice/TI_Driver_Developemnt/Debug/syscfg" -Wl,-i"D:/Swapnil_Software/Code_Composer_Studio_TI/ccs/tools/compiler/ti-cgt-armllvm_3.2.2.LTS/lib" -Wl,--diag_wrap=off -Wl,--display_error_number -Wl,--warn_sections -Wl,--xml_link_info="TI_Driver_Developemnt_linkInfo.xml" -Wl,--rom_model -o "TI_Driver_Developemnt.out" $(ORDERED_OBJS)
+	"D:/Swapnil_Software/Code_Composer_Studio_TI/ccs/tools/compiler/ti-cgt-armllvm_3.2.2.LTS/bin/tiarmclang.exe" @"device.opt"  -march=thumbv6m -mcpu=cortex-m0plus -mfloat-abi=soft -mlittle-endian -mthumb -O2 -gdwarf-3 -Wall -Wl,-m"TI_Driver_Developemnt.map" -Wl,-i"C:/ti/mspm0_sdk_2_10_00_04/source" -Wl,-i"C:/Users/sacf n/Desktop/Git_Practice/TI_Timer_Driver_Prictice/TI_Driver_Development" -Wl,-i"C:/Users/sacf n/Desktop/Git_Practice/TI_Timer_Driver_Prictice/TI_Driver_Development/Debug/syscfg" -Wl,-i"D:/Swapnil_Software/Code_Composer_Studio_TI/ccs/tools/compiler/ti-cgt-armllvm_3.2.2.LTS/lib" -Wl,--diag_wrap=off -Wl,--display_error_number -Wl,--warn_sections -Wl,--xml_link_info="TI_Driver_Developemnt_linkInfo.xml" -Wl,--rom_model -o "TI_Driver_Developemnt.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
