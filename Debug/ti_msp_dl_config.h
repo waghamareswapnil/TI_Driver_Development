@@ -77,12 +77,22 @@ extern "C" {
 
 
 
+
+/* Port definition for Pin Group GPIO_GRP_0 */
+#define GPIO_GRP_0_PORT                                                  (GPIOA)
+
+/* Defines for Test1: GPIOA.27 with pinCMx 60 on package pin 31 */
+#define GPIO_GRP_0_Test1_PIN                                    (DL_GPIO_PIN_27)
+#define GPIO_GRP_0_Test1_IOMUX                                   (IOMUX_PINCM60)
+
+
 /* clang-format on */
 
 void SYSCFG_DL_init(void);
 void SYSCFG_DL_initPower(void);
 void SYSCFG_DL_GPIO_init(void);
 void SYSCFG_DL_SYSCTL_init(void);
+
 
 
 #ifdef __cplusplus
